@@ -30,3 +30,5 @@ WORKDIR /app
 
 RUN which ffmpeg || apt-get update && apt-get install -y ffmpeg
 RUN which ffprobe
+COPY package.json /app/package.json
+COPY *.json yarn.lock /app/
